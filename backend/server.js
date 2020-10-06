@@ -8,10 +8,12 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/products/', (req, res) => {
+  console.log('All products requested');
   res.json(products)
 });
 
 app.get('/api/products/:id', (req, res) => {
+  console.log(`Product with id: ${req.params.id} requested`);
   const product = products.find(p => p._id === req.params.id);
   res.json(product);
 });
