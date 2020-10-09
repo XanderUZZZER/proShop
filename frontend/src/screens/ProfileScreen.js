@@ -106,6 +106,7 @@ const ProfileScreen = ({ location, history }) => {
         </Button>
         </Form>
       </Col>
+
       <Col md={9}>
         {loadingOrders ? (
           <Loader />
