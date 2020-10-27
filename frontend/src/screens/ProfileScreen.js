@@ -32,7 +32,7 @@ const ProfileScreen = ({ location, history }) => {
     if (!userInfo) {
       history.push('/login')
     } else {
-      if (!user.name) {
+      if (!user || !user.name) {
         dispatch(getUserDetails('profile'))
         dispatch(listMyOrders())
       } else {
@@ -56,7 +56,7 @@ const ProfileScreen = ({ location, history }) => {
       <Col md={3}>
         <h2>User profile</h2>
         {message && <Message variant='danger'>{message}</Message>}
-        {error && <Message variant='danger'>{error}</Message>}
+        {/* {error && <Message variant='danger'>{error}</Message>} */}
         {success && <Message variant='success'>Profile Updated</Message>}
         {loading && <Loader />}
         <Form onSubmit={submitHandler}>
