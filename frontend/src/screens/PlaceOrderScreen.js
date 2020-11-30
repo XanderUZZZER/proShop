@@ -12,7 +12,7 @@ const PlaceOrderScreen = ({ history }) => {
   const dispatch = useDispatch()
   const cart = useSelector((state) => state.cart)
 
-  if (!cart.ShippingAddress.address) {
+  if (!cart.shippingAddress.address) {
     history.push('/shipping')
   } else if (!cart.paymentMethod) {
     history.push('/payment')
