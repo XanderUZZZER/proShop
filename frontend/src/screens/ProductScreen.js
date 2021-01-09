@@ -38,10 +38,10 @@ const ProductScreen = ({ history, match }) => {
       setComment('')
     }
     if (!product._id || product._id !== match.params.id) {
+      dispatch(listProductDetails(match.params.id))
       dispatch({ type: PRODUCT_CREATE_REVIEW_RESET })
     }
-    dispatch(listProductDetails(match.params.id))
-  }, [dispatch, match, successProductReview])
+  }, [dispatch, match, successProductReview, product._id])
 
   const addToCartHandler = () => {
     history.push(`/cart/${match.params.id}?qty=${qty}`)
@@ -169,7 +169,8 @@ const ProductScreen = ({ history, match }) => {
                         </Message>
                       )}
                       {errorProductReview && (
-                        <Message variant='danger'>{errorProductReview}</Message>
+                        // <Message variant='danger'>{errorProductReview}</Message>
+                        <Message variant='danger'>Add some comment to change rating</Message>
                       )}
                       {userInfo ? (
                         <Form onSubmit={submitHandler}>
