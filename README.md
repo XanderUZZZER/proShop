@@ -1,9 +1,8 @@
-# ProShop eCommerce Platform
+# [ProShop eCommerce Platform](https://xander-proshop.herokuapp.com/)
 
-> eCommerce platform built with the MERN stack & Redux.
-> This is the course project for Bard Traversy's [MERN eCommerce From Scratch](https://www.udemy.com/course/mern-ecommerce) course
+# Description
 
-![screenshot](https://github.com/bradtraversy/proshop_mern/blob/master/uploads/Screen%20Shot%202020-09-29%20at%205.50.52%20PM.png)
+eCommerce platform built with the MERN stack & Redux. This app includes authentication, profiles, products catalog, shopping cart etc. Users can make purchases, review products, rate them. Authenticated admin users can modify products catalog, mark paid orders to delivery, give admin rights regular users. Payment system is developed with PayPal API.
 
 ## Features
 
@@ -21,15 +20,57 @@
 - PayPal / credit card integration
 - Database seeder (products & users)
 
+##### \*This project is based on Brad Traversy's MERN eCommerce From Scratch
+
+<br>
+<p align="center">
+  <img src="./screenshots/PS1.jpg" width="49%" />  
+  <img src="./screenshots/PS3.jpg" width="49%" />
+  <img src="./screenshots/PS6.jpg" width="49%" />
+  <img src="./screenshots/PS2.jpg" width="49%" />
+  <img src="./screenshots/PS4.jpg" width="49%" />
+  <img src="./screenshots/PS5.jpg" width="49%" />
+</p>
+
+## Live demo
+
+Live demo of the app is hosted on Heroku.  
+Visit [https://xander-proshop.herokuapp.com/](https://xander-proshop.herokuapp.com/)
+
+Test users credentials:
+
+> Admin user
+>
+> - login - _admin@example.com_
+> - password - _123456_
+
+> Regular user
+>
+> - login - _john@example.com_
+> - password - _123456_
+
+_Due to demo reasons and heroku free terms, if an app receives no web traffic in a 30-minute period, it will sleep. Therefore, during the first launch, the application may take longer to load than usual, approximately 15 - 20 seconds. So please be patient and wait for the app to launch. Subsequent launches will be relatively fast._
+
+## Technology stack
+
+> ### FrontEnd
+>
+> - React
+> - React Hooks
+> - Redux with Hooks
+> - React router
+>
+> ### BackEnd
+>
+> - Node
+> - Express
+> - JWT
+> - MongoDB
+> - PayPal API
+> - Heroku hosting
+>   <br>
+
 ## Usage
-
-### ES Modules in Node
-
-We us ECMAScript Modules in the backend in this project. Be sure to have at least Node v14.6+ or you will need to add the "--experimental-modules" flag.
-
-Also, when importing a file (not a package), be sure to add .js at the end or you will get a "module not found" error
-
-You can also install and setup Babel if you would like
 
 ### Env Variables
 
@@ -39,7 +80,7 @@ Create a .env file in then root and add the following
 NODE_ENV = development
 PORT = 5000
 MONGO_URI = your mongodb uri
-JWT_SECRET = 'abc123'
+JWT_SECRET = 'secret'
 PAYPAL_CLIENT_ID = your paypal client id
 ```
 
@@ -90,27 +131,3 @@ john@example.com (Customer)
 jane@example.com (Customer)
 123456
 ```
-
-## License
-
-The MIT License
-
-Copyright (c) 2020 Traversy Media https://traversymedia.com
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
