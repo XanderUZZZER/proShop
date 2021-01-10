@@ -72,6 +72,13 @@ _Due to demo reasons and heroku free terms, if an app receives no web traffic in
 
 ## Usage
 
+Clone this repository to desired location
+
+```Shell
+git clone https://github.com/XanderUZZZER/proShop.git
+```
+
+<br>
 ### Env Variables
 
 Create a .env file in then root and add the following
